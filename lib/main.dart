@@ -1,5 +1,6 @@
+import 'package:ecommerce_app/screens/shop.dart';
 import 'package:ecommerce_app/screens/welcome_screen.dart';
-import 'package:ecommerce_app/widgets/appbar.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,17 +14,14 @@ class EcommerceApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Poppins'),
       initialRoute: 'welcome_screen',
       routes: {
         'welcome_screen': (context) => const WelcomeScreen(),
-       
+        'shop_screen': (context) => const ShopScreen()
       },
     );
   }
 }
-
-

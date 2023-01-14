@@ -1,4 +1,5 @@
-import 'package:ecommerce_app/widgets/drawer_list.dart';
+import 'package:ecommerce_app/constants/color.dart';
+import 'package:ecommerce_app/screens/drawer/drawer_list.dart';
 import 'package:flutter/material.dart';
 
 class DrawerWidget extends StatelessWidget {
@@ -9,6 +10,7 @@ class DrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -38,9 +40,10 @@ class DrawerWidget extends StatelessWidget {
             child: Text(
               "Shop By Category",
               style: TextStyle(
-                  color: Color(0xff262626),
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500),
+                color: textColor,
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
           Expanded(
@@ -50,88 +53,88 @@ class DrawerWidget extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 35,
-                    vertical: 15,
+                    vertical: 5,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: const [
-                      DrawerList(
+                      ItemList(
                         title: "Shoes",
                         screenName: "screen",
                         fontSize: 14,
                       ),
-                      DrawerList(
+                      ItemList(
                         title: "Bags",
                         screenName: "screen",
                         fontSize: 14,
                       ),
-                      DrawerList(
+                      ItemList(
                         title: "Perfumes",
                         screenName: "screen",
                         fontSize: 14,
                       ),
-                      DrawerList(
+                      ItemList(
                         title: "Men",
                         screenName: "screen",
                         fontSize: 14,
                       ),
-                      DrawerList(
+                      ItemList(
                         title: "Shoes",
                         screenName: "screen",
                         fontSize: 14,
                       ),
-                      DrawerList(
+                      ItemList(
                         title: "Bags",
                         screenName: "screen",
                         fontSize: 14,
                       ),
-                      DrawerList(
+                      ItemList(
                         title: "Perfumes",
                         screenName: "screen",
                         fontSize: 14,
                       ),
-                      DrawerList(
+                      ItemList(
                         title: "Men",
                         screenName: "screen",
                         fontSize: 14,
                       ),
-                      DrawerList(
+                      ItemList(
                         title: "Shoes",
                         screenName: "screen",
                         fontSize: 14,
                       ),
-                      DrawerList(
+                      ItemList(
                         title: "Bags",
                         screenName: "screen",
                         fontSize: 14,
                       ),
-                      DrawerList(
+                      ItemList(
                         title: "Shoes",
                         screenName: "screen",
                         fontSize: 14,
                       ),
-                      DrawerList(
+                      ItemList(
                         title: "Bags",
                         screenName: "screen",
                         fontSize: 14,
                       ),
-                      DrawerList(
+                      ItemList(
                         title: "Perfumes",
                         screenName: "screen",
                         fontSize: 14,
                       ),
-                      DrawerList(
+                      ItemList(
                         title: "Men",
                         screenName: "screen",
                         fontSize: 14,
                       ),
-                      DrawerList(
+                      ItemList(
                         title: "Perfumes",
                         screenName: "screen",
                         fontSize: 14,
                       ),
-                      DrawerList(
+                      ItemList(
                         title: "Men",
                         screenName: "screen",
                         fontSize: 14,

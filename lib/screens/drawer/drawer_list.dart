@@ -1,10 +1,11 @@
+import 'package:ecommerce_app/constants/color.dart';
 import 'package:flutter/material.dart';
 
-class DrawerList extends StatelessWidget {
+class ItemList extends StatelessWidget {
   final String title;
   final String screenName;
   final int fontSize;
-  const DrawerList({
+  const ItemList({
     Key? key,
     required this.title,
     required this.screenName,
@@ -30,7 +31,7 @@ class DrawerList extends StatelessWidget {
             title,
             textAlign: TextAlign.left,
             style: const TextStyle(
-                color: Color(0xff323232),
+                color: primaryColor,
                 fontSize: 14,
                 fontWeight: FontWeight.w400),
           )),
