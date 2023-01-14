@@ -18,9 +18,9 @@ class _AppBarWidgetState extends State<AppBarWidget>
   @override
   void initState() {
     _controller1 = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 600),
-    );
+        vsync: this,
+        duration: const Duration(milliseconds: 150),
+        upperBound: 0.5);
 
     super.initState();
   }
@@ -81,38 +81,38 @@ class _AppBarWidgetState extends State<AppBarWidget>
                 ),
                 Row(
                   children: [
-                    Container(
-                      color: Colors.red,
-                      child: PopupMenuButton(
-                       
-                        offset: const Offset(0, 25),
-                        onSelected: (value) {
-                          _controller1.forward(from: 0.0);
-                        },
-                        onCanceled: () {
-                          print('onCanceled');
-                          _controller1.reverse(from: 0.5);
-                        },
-                        child: Row(
-                          children: [
-                            const Text(
-                              'Brand',
-                              style: TextStyle(
-                                  color: Color(0xff65676B),
-                                  fontSize: 14,
-                                  letterSpacing: .5,
-                                  height: 1.5,
-                                  fontWeight: FontWeight.w400),
-                            ),
-                            RotationTransition(
-                              turns: Tween(begin: 0.0, end: 1.0)
-                                  .animate(_controller1),
-                              child: const Icon(Icons.expand_more),
-                            )
-                          ],
-                        ),
-                        itemBuilder: (context) => [
-                          // popupmenu item 1
+                    PopupMenuButton(
+                      offset: const Offset(0, 25),
+                      onSelected: (value) {
+                        _controller1.forward(from: 0.0);
+                      },
+                      onCanceled: () {
+                        print('onCanceled');
+                        _controller1.reverse(from: 0.5);
+                      },
+                      child: Row(
+                        children: [
+                          const Text(
+                            'Brand',
+                            style: TextStyle(
+                                color: Color(0xff65676B),
+                                fontSize: 14,
+                                letterSpacing: .5,
+                                height: 1.5,
+                                fontWeight: FontWeight.w400),
+                          ),
+                          RotationTransition(
+                            turns: Tween(
+                              begin: 0.0,
+                              end: 1.0,
+                            ).animate(_controller1),
+                            child: const Icon(Icons.expand_more),
+                          )
+                        ],
+                      ),
+                      itemBuilder: (context) {
+                        _controller1.forward();
+                        return [
                           PopupMenuItem(
                             value: 1,
                             child: Padding(
@@ -139,8 +139,9 @@ class _AppBarWidgetState extends State<AppBarWidget>
                                           style: TextButton.styleFrom(
                                             minimumSize: Size.zero,
                                             padding: EdgeInsets.zero,
-                                            tapTargetSize: MaterialTapTargetSize
-                                                .shrinkWrap,
+                                            tapTargetSize:
+                                                MaterialTapTargetSize
+                                                    .shrinkWrap,
                                           ),
                                           child: const Text(
                                             "See All",
@@ -197,8 +198,8 @@ class _AppBarWidgetState extends State<AppBarWidget>
                               ),
                             ),
                           ),
-                        ],
-                      ),
+                        ];
+                      },
                     ),
                   ],
                 )
