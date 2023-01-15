@@ -1,31 +1,33 @@
 import 'package:flutter/material.dart';
 
-class SearchField extends StatelessWidget {
-  const SearchField({
+class TextFieldCustom extends StatelessWidget {
+  final String hintText;
+  const TextFieldCustom({
     Key? key,
+    required this.hintText
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const TextField(
+    return TextField(
       decoration: InputDecoration(
-        hintText: 'Search Products',
-        hintStyle: TextStyle(
-          fontSize: 14,
+        hintText: hintText,
+        hintStyle: const TextStyle(
+          fontSize: 13,
           color: Colors.grey,
         ),
-        contentPadding: EdgeInsets.symmetric(
+        contentPadding: const EdgeInsets.symmetric(
           vertical: 10.0,
           horizontal: 20.0,
         ),
-        border: OutlineInputBorder(
+        border: const OutlineInputBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(
               4,
             ),
           ),
         ),
-        enabledBorder: OutlineInputBorder(
+        enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: Color(0xffe4e6eb),
             width: 1.0,
@@ -34,9 +36,18 @@ class SearchField extends StatelessWidget {
             Radius.circular(4.0),
           ),
         ),
-        focusedBorder: OutlineInputBorder(
+        focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: Color(0xffbdcbd2),
+            width: 1.0,
+          ),
+          borderRadius: BorderRadius.all(
+            Radius.circular(4.0),
+          ),
+        ),
+        errorBorder: const OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.red,
             width: 1.0,
           ),
           borderRadius: BorderRadius.all(

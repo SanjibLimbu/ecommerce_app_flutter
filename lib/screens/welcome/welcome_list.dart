@@ -20,7 +20,7 @@ class WelcomeList extends StatelessWidget {
           children: const [
             ItemList(
               title: 'Login',
-              screenName: '',
+              screenName: 'login_screen',
               fontSize: 13,
             ),
             ItemList(

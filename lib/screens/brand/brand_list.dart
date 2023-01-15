@@ -37,7 +37,7 @@ class BrandPopUpWidget extends StatelessWidget {
                   child: const Text(
                     "See All",
                     style: TextStyle(
-                      color: Color(0xff2962ff),
+                      color: linkText,
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
                     ),

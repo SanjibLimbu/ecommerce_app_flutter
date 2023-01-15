@@ -13,5 +13,12 @@ const kPaddingWelocome = EdgeInsets.only(
   top: 20,
   left: 16,
   right: 16,
-  bottom: 16,
+);
+
+const fieldLabelStyle = TextStyle(
+  fontSize: 14,
+  color: primaryColor,
+  height: 1.5,
+  letterSpacing: .5,
+  fontWeight: FontWeight.w400,
 );

@@ -1,0 +1,44 @@
+import 'package:ecommerce_app/constants/style.dart';
+import 'package:flutter/material.dart';
+
+class SocialBtn extends StatelessWidget {
+  final String icon;
+  final String title;
+  final Function action;
+
+  const SocialBtn({
+    Key? key,
+    required this.action,
+    required this.icon,
+    required this.title,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return OutlinedButton.icon(
+      style: OutlinedButton.styleFrom(
+        minimumSize: const Size(
+          double.infinity,
+          55.6,
+        ),
+        padding: const EdgeInsets.symmetric(
+          vertical: 12,
+          horizontal: 20,
+        ),
+      ),
+      onPressed: () {
+        action();
+      },
+      icon: Image.asset(
+        icon,
+        height: 30,
+        width: 30,
+        fit: BoxFit.fill,
+      ),
+      label: Text(
+        title,
+        style: fieldLabelStyle,
+      ),
+    );
+  }
+}
