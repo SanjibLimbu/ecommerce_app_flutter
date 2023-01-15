@@ -13,11 +13,12 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          padding: kPaddingWelocome,
-          child: SingleChildScrollView(
-            child: SizedBox(
-              height: MediaQuery.of(context).size.height*1,
+          child: CustomScrollView(
+        slivers: [
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Container(
+              padding: kPaddingWelocome,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -117,15 +118,17 @@ class LoginScreen extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       'Forgot Password?',
-                      style: fieldLabelStyle.copyWith(color: linkText),
+                      style: fieldLabelStyle.copyWith(
+                        color: linkText,
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
-          ),
-        ),
-      ),
+          )
+        ],
+      )),
     );
   }
 }
