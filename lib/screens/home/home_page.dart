@@ -5,8 +5,8 @@ import 'package:ecommerce_app/screens/drawer/drawer.dart';
 
 import 'package:ecommerce_app/widgets/app_bar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:ecommerce_app/widgets/carousel/carousel_btn.dart';
-import 'package:ecommerce_app/widgets/carousel/indicator_dot.dart';
+import 'package:ecommerce_app/screens/home/carousel/carousel_btn.dart';
+import 'package:ecommerce_app/screens/home/carousel/indicator_dot.dart';
 
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -147,9 +147,12 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                       height: 16,
                     ),
                     Image.asset(
-                      'assets/images/home_image1.jpg',
-                      height: MediaQuery.of(context).size.height * 0.32,
+                      'assets/images/banner6.jpg',
+                      height: MediaQuery.of(context).size.height * 0.2,
                       fit: BoxFit.fill,
+                    ),
+                    const SizedBox(
+                      height: 16,
                     ),
                   ],
                 ),

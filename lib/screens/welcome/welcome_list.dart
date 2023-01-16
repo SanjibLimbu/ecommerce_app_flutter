@@ -25,7 +25,7 @@ class WelcomeList extends StatelessWidget {
             ),
             ItemList(
               title: 'Sign Up',
-              screenName: '',
+              screenName: 'signup_screen',
               fontSize: 13,
             ),
           ],

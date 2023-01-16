@@ -1,12 +1,12 @@
 import 'package:ecommerce_app/constants/color.dart';
 import 'package:ecommerce_app/constants/style.dart';
-import 'package:ecommerce_app/screens/login/login_form.dart';
+import 'package:ecommerce_app/screens/SignUp/signup_form.dart';
 import 'package:ecommerce_app/widgets/social_btn.dart';
 
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   void action() {}
 
@@ -25,7 +25,7 @@ class LoginScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    "Login",
+                    "Sign Up",
                     style: TextStyle(
                         color: textColor,
                         height: 1.5,
@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
                   SocialBtn(
                     action: action,
                     icon: 'assets/images/google.png',
-                    title: 'Login with Google',
+                    title: 'Sign Up with Google',
                   ),
                   const SizedBox(
                     height: 8,
@@ -54,22 +54,13 @@ class LoginScreen extends StatelessWidget {
                   SocialBtn(
                     action: action,
                     icon: 'assets/images/facebook.png',
-                    title: 'Login with Facebook',
+                    title: 'Sign up with Facebook',
                   ),
                   const SizedBox(
                     height: 20,
                   ),
-                  LogInForm(),
 
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Forgot Password?',
-                      style: fieldLabelStyle.copyWith(
-                        color: linkText,
-                      ),
-                    ),
-                  ),
+                  SignUpForm(),
                 ],
               ),
             ),

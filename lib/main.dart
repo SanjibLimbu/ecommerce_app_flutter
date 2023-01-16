@@ -1,6 +1,7 @@
+import 'package:ecommerce_app/screens/SignUp/signup_screen.dart';
 import 'package:ecommerce_app/screens/login/login_screen.dart';
 import 'package:ecommerce_app/screens/shop.dart';
-import 'package:ecommerce_app/screens/home_page.dart';
+import 'package:ecommerce_app/screens/home/home_page.dart';
 
 import 'package:flutter/material.dart';
 
@@ -23,6 +24,7 @@ class EcommerceApp extends StatelessWidget {
         'welcome_screen': (context) => const WelcomeScreen(),
         'shop_screen': (context) => const ShopScreen(),
         'login_screen': (context) => const LoginScreen(),
+        'signup_screen': (context) => SignUpScreen(),
       },
     );
   }
