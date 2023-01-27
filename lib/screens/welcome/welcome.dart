@@ -27,7 +27,7 @@ class WelcomeWidget extends StatelessWidget {
         children: [
           const Text(
             'Welocme!',
-            style: kNavBarTextStyle,
+            style: textStyle,
           ),
           RotationTransition(
             turns: Tween(

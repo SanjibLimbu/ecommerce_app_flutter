@@ -26,7 +26,7 @@ class Brand extends StatelessWidget {
         children: [
           const Text(
             'Brand',
-            style: kNavBarTextStyle,
+            style: textStyle,
           ),
           RotationTransition(
             turns: Tween(

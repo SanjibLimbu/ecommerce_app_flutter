@@ -1,7 +1,7 @@
 import 'package:ecommerce_app/constants/color.dart';
 import 'package:flutter/material.dart';
 
-const kNavBarTextStyle = TextStyle(
+const textStyle = TextStyle(
   color: secondaryColor,
   fontSize: 14,
   letterSpacing: .5,
@@ -15,10 +15,3 @@ const kPaddingWelocome = EdgeInsets.only(
   right: 16,
 );
 
-const fieldLabelStyle = TextStyle(
-  fontSize: 14,
-  color: primaryColor,
-  height: 1.5,
-  letterSpacing: .5,
-  fontWeight: FontWeight.w400,
-);

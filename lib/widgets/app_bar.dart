@@ -79,10 +79,12 @@ class AppBarWidget extends StatelessWidget {
                   brandController: _brandController,
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'shop_screen');
+                  },
                   child: const Text(
                     'Shop',
-                    style: kNavBarTextStyle,
+                    style: textStyle,
                   ),
                 ),
 
@@ -92,7 +94,9 @@ class AppBarWidget extends StatelessWidget {
                 ),
               ],
             ),
-            const TextFieldCustom(hintText: 'Search Products',),
+            const TextFieldCustom(
+              hintText: 'Search Products',
+            ),
           ],
         ),
       ),

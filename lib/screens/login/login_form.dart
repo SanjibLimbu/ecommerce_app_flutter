@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/constants/color.dart';
 import 'package:ecommerce_app/constants/style.dart';
 import 'package:ecommerce_app/widgets/text_field.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +15,11 @@ class LogInForm extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               "Email Address",
-              style: fieldLabelStyle,
+              style: textStyle.copyWith(
+                color: primaryColor,
+              ),
             ),
             const TextFieldCustom(
               hintText: 'Please Enter Your Email',
@@ -24,9 +27,11 @@ class LogInForm extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-            const Text(
+            Text(
               "Password",
-              style: fieldLabelStyle,
+              style: textStyle.copyWith(
+                color: primaryColor,
+              ),
             ),
             const TextFieldCustom(
               hintText: 'Please Enter Your Password',
@@ -51,7 +56,8 @@ class LogInForm extends StatelessWidget {
                   ),
                   child: Text(
                     'Login',
-                    style: fieldLabelStyle.copyWith(
+                    style: textStyle.copyWith(
+                      color: primaryColor,
                       fontSize: 13,
                       fontWeight: FontWeight.w500,
                       letterSpacing: .9,
@@ -63,7 +69,8 @@ class LogInForm extends StatelessWidget {
                   onPressed: () {},
                   child: Text(
                     "Create An Account",
-                    style: fieldLabelStyle.copyWith(
+                    style: textStyle.copyWith(
+                      color: primaryColor,
                       fontSize: 13,
                     ),
                   ),

@@ -65,7 +65,7 @@ class LoginScreen extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       'Forgot Password?',
-                      style: fieldLabelStyle.copyWith(
+                      style: textStyle.copyWith(
                         color: linkText,
                       ),
                     ),

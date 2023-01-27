@@ -16,9 +16,9 @@ class SignUpForm extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             "Email Address",
-            style: fieldLabelStyle,
+            style: textStyle.copyWith(color: primaryColor),
           ),
           const TextFieldCustom(
             hintText: 'Please Enter Your Email',
@@ -26,9 +26,11 @@ class SignUpForm extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-          const Text(
+          Text(
             "First Name",
-            style: fieldLabelStyle,
+            style: textStyle.copyWith(
+              color: primaryColor,
+            ),
           ),
           const TextFieldCustom(
             hintText: 'Please Enter Your First Name',
@@ -36,9 +38,11 @@ class SignUpForm extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-          const Text(
+          Text(
             "Last Name",
-            style: fieldLabelStyle,
+            style: textStyle.copyWith(
+              color: primaryColor,
+            ),
           ),
           const TextFieldCustom(
             hintText: 'Please Enter Your Last Name',
@@ -46,9 +50,11 @@ class SignUpForm extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-          const Text(
+          Text(
             "Password",
-            style: fieldLabelStyle,
+            style: textStyle.copyWith(
+              color: primaryColor,
+            ),
           ),
           const TextFieldCustom(
             hintText: 'Please Enter Your Password',
@@ -70,7 +76,8 @@ class SignUpForm extends StatelessWidget {
             ),
             child: Text(
               'Sign Up',
-              style: fieldLabelStyle.copyWith(
+              style: textStyle.copyWith(
+                color: primaryColor,
                 fontSize: 13,
                 fontWeight: FontWeight.w500,
                 letterSpacing: .9,
@@ -82,7 +89,7 @@ class SignUpForm extends StatelessWidget {
             onPressed: () {},
             child: Text(
               'Back To Login',
-              style: fieldLabelStyle.copyWith(
+              style: textStyle.copyWith(
                 color: linkText,
               ),
             ),

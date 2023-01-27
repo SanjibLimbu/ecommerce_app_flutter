@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/constants/color.dart';
 import 'package:ecommerce_app/constants/style.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +38,9 @@ class SocialBtn extends StatelessWidget {
       ),
       label: Text(
         title,
-        style: fieldLabelStyle,
+        style: textStyle.copyWith(
+          color: primaryColor,
+        ),
       ),
     );
   }
