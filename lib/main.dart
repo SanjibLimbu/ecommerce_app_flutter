@@ -19,7 +19,7 @@ class EcommerceApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Poppins'),
-      initialRoute: 'shop_screen',
+      initialRoute: 'welcome_screen',
       routes: {
         'welcome_screen': (context) => const WelcomeScreen(),
         'shop_screen': (context) => const ShopScreen(),

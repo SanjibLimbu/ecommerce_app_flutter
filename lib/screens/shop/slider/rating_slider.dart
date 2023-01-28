@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/screens/shop/custome_slider_theme.dart';
+import 'package:ecommerce_app/screens/shop/slider/custome_slider_theme.dart';
 import 'package:ecommerce_app/utils/util_slider_rating.dart';
 
 import 'package:flutter/material.dart';

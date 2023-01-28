@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/constants/imges.dart';
-import 'package:ecommerce_app/constants/style.dart';
+
 
 import 'package:ecommerce_app/screens/drawer/drawer.dart';
 
@@ -9,7 +9,7 @@ import 'package:ecommerce_app/screens/home/carousel/carousel_btn.dart';
 import 'package:ecommerce_app/screens/home/carousel/indicator_dot.dart';
 
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
