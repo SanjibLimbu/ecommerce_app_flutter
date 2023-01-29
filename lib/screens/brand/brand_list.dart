@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/constants/color.dart';
-import 'package:ecommerce_app/screens/drawer/drawer_list.dart';
+import 'package:ecommerce_app/screens/drawer/menu/drawer_list.dart';
 import 'package:flutter/material.dart';
 
 class BrandPopUpWidget extends StatelessWidget {

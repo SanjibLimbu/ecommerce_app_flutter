@@ -22,7 +22,7 @@ class SortAndFilterCard extends StatelessWidget {
           backgroundColor: Colors.white,
           minimumSize: const Size(100, 44),
           side: const BorderSide(
-            color: Color(0xffe7e7e7),
+            color: borderColor,
           ),
         ),
         onPressed: (() {

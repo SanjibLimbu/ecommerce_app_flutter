@@ -17,7 +17,7 @@ class ShowModalCardFilter extends StatelessWidget {
       elevation: 1,
       shape: RoundedRectangleBorder(
           side: const BorderSide(
-            color: Color(0xffe7e7e7),
+            color: borderColor,
           ),
           borderRadius: BorderRadius.circular(6.0)),
       child: Column(
@@ -33,7 +33,7 @@ class ShowModalCardFilter extends StatelessWidget {
               border: Border(
                 bottom: BorderSide(
                   width: 1,
-                  color: Color(0xffe7e7e7),
+                  color: borderColor,
                 ),
               ),
             ),

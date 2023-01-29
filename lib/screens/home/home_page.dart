@@ -1,7 +1,8 @@
 import 'package:ecommerce_app/constants/imges.dart';
+import 'package:ecommerce_app/screens/drawer/cart/cart_drawer.dart';
 
 
-import 'package:ecommerce_app/screens/drawer/drawer.dart';
+import 'package:ecommerce_app/screens/drawer/menu/drawer.dart';
 
 import 'package:ecommerce_app/widgets/app_bar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -64,6 +65,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     return Scaffold(
       key: _scaffoldKey,
       drawer: const DrawerWidget(),
+      endDrawer: const CartDrawer(),
       body: Column(
         children: [
           AppBarWidget(

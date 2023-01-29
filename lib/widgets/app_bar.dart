@@ -63,7 +63,9 @@ class AppBarWidget extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _scaffoldKey.currentState?.openEndDrawer();
+                  },
                   icon: const Icon(
                     Icons.shopping_bag_outlined,
                     size: 30,

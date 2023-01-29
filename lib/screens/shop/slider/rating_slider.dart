@@ -47,7 +47,8 @@ class _RatingSliderState extends State<RatingSlider> {
                       const selectedColor = Colors.black;
                       final unselectedColor = Colors.black.withOpacity(0.3);
                       final isSelected = index <= indexTop;
-                      final color = isSelected ? selectedColor : unselectedColor;
+                      final color =
+                          isSelected ? selectedColor : unselectedColor;
 
                       return buildLabel(
                           label: label.toString(),
