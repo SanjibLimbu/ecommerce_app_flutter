@@ -21,7 +21,7 @@ class LogInForm extends StatelessWidget {
                 color: primaryColor,
               ),
             ),
-            const TextFieldCustom(
+            TextFieldCustom(
               hintText: 'Please Enter Your Email',
             ),
             const SizedBox(
@@ -33,7 +33,7 @@ class LogInForm extends StatelessWidget {
                 color: primaryColor,
               ),
             ),
-            const TextFieldCustom(
+            TextFieldCustom(
               hintText: 'Please Enter Your Password',
             ),
             const SizedBox(

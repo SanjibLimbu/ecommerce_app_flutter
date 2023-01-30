@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/Prodcut/product_card.dart';
+import 'package:ecommerce_app/Product/product_card.dart';
 import 'package:ecommerce_app/constants/color.dart';
 import 'package:ecommerce_app/screens/drawer/cart/cart_drawer.dart';
 
@@ -27,7 +27,7 @@ class _ShopScreenState extends State<ShopScreen> {
         preferredSize: const Size.fromHeight(70),
         child: MimiAppBar(
           scaffoldKeyCart: _scaffoldKeyCart,
-          titleAppbar: const TextFieldCustom(
+          titleAppbar: TextFieldCustom(
             hintText: 'Search Products',
           ),
         ),

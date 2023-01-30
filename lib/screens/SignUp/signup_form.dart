@@ -20,7 +20,7 @@ class SignUpForm extends StatelessWidget {
             "Email Address",
             style: textStyle.copyWith(color: primaryColor),
           ),
-          const TextFieldCustom(
+          TextFieldCustom(
             hintText: 'Please Enter Your Email',
           ),
           const SizedBox(
@@ -32,7 +32,7 @@ class SignUpForm extends StatelessWidget {
               color: primaryColor,
             ),
           ),
-          const TextFieldCustom(
+          TextFieldCustom(
             hintText: 'Please Enter Your First Name',
           ),
           const SizedBox(
@@ -44,7 +44,7 @@ class SignUpForm extends StatelessWidget {
               color: primaryColor,
             ),
           ),
-          const TextFieldCustom(
+          TextFieldCustom(
             hintText: 'Please Enter Your Last Name',
           ),
           const SizedBox(
@@ -56,7 +56,7 @@ class SignUpForm extends StatelessWidget {
               color: primaryColor,
             ),
           ),
-          const TextFieldCustom(
+          TextFieldCustom(
             hintText: 'Please Enter Your Password',
           ),
           const SizedBox(
