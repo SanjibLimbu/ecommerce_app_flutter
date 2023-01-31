@@ -30,7 +30,10 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
           titleAppbar: Center(
             child: Text(
               'Product',
-              style: textStyle.copyWith(color: textColor, fontSize: 16),
+              style: textStyle.copyWith(
+                color: textColor,
+                fontSize: 16,
+              ),
             ),
           ),
         ),
