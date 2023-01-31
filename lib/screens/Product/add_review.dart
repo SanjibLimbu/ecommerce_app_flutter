@@ -2,6 +2,7 @@ import 'package:ecommerce_app/constants/color.dart';
 import 'package:ecommerce_app/constants/style.dart';
 import 'package:ecommerce_app/widgets/text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class AddReviewWidget extends StatefulWidget {
   const AddReviewWidget({
@@ -30,7 +31,9 @@ class _AddReviewWidgetState extends State<AddReviewWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16,),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 16,
+      ),
       child: ExpansionPanelList(
         elevation: 1,
         key: expansionTileKey,
@@ -97,38 +100,22 @@ class _AddReviewWidgetState extends State<AddReviewWidget> {
                   const SizedBox(
                     height: 3,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
-                      Icon(
-                        Icons.star_rounded,
-                        size: 18,
-                        color: starColor,
-                      ),
-                      Icon(
-                        Icons.star_rounded,
-                        size: 18,
-                        color: starColor,
-                      ),
-                      Icon(
-                        Icons.star_rounded,
-                        size: 18,
-                        color: starColor,
-                      ),
-                      Icon(
-                        Icons.star_rounded,
-                        size: 18,
-                        color: starColor,
-                      ),
-                      Icon(
-                        Icons.star_rounded,
-                        size: 18,
-                        color: starColor,
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                    ],
+                  RatingBar.builder(
+                    initialRating: 3,
+                    minRating: 1,
+                    direction: Axis.horizontal,
+                    allowHalfRating: true,
+                    itemCount: 5,
+                    glow: false,
+                    itemSize:25,
+                    itemPadding: const EdgeInsets.symmetric(horizontal: 0),
+                    itemBuilder: (context, _) => const Icon(
+                      Icons.star_rounded,
+                      color: starColor,
+                    ),
+                    onRatingUpdate: (rating) {
+                      print(rating);
+                    },
                   ),
                   const SizedBox(
                     height: 15,

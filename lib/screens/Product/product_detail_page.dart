@@ -1,12 +1,13 @@
-import 'package:ecommerce_app/Product/add_review.dart';
-import 'package:ecommerce_app/Product/product_des.dart';
-import 'package:ecommerce_app/Product/rating_widget.dart';
+import 'package:ecommerce_app/screens/Product/add_review.dart';
+import 'package:ecommerce_app/screens/Product/product_des.dart';
+import 'package:ecommerce_app/screens/Product/rating_widget.dart';
 import 'package:ecommerce_app/constants/color.dart';
 import 'package:ecommerce_app/constants/style.dart';
 import 'package:ecommerce_app/screens/drawer/cart/cart_drawer.dart';
 import 'package:ecommerce_app/widgets/mimi_app_bar.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class ProductDetailPage extends StatefulWidget {
   const ProductDetailPage({super.key});
@@ -70,7 +71,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
               ],
             ),
             const ProductDescription(),
-            const RatingWidget(),
+            const CustomRatingWidget(),
             const AddReviewWidget(),
             Padding(
               padding: const EdgeInsets.symmetric(
@@ -88,7 +89,17 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                       radius: 20,
                       child: Text('S'),
                     ),
-                    trailing: const Text('star star star'),
+                    trailing: RatingBarIndicator(
+                      direction: Axis.horizontal,
+                      rating: 4,
+                      itemCount: 5,
+                      itemSize: 18,
+                      itemPadding: const EdgeInsets.symmetric(horizontal: 0),
+                      itemBuilder: (context, _) => const Icon(
+                        Icons.star_rounded,
+                        color: starColor,
+                      ),
+                    ),
                     title: Text(
                       'The Apple Macbook',
                       style:

@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/Product/add_to_bag_btn.dart';
+import 'package:ecommerce_app/screens/Product/add_to_bag_btn.dart';
 import 'package:ecommerce_app/constants/color.dart';
 import 'package:ecommerce_app/constants/style.dart';
 import 'package:ecommerce_app/widgets/text_field.dart';

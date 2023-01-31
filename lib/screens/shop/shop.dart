@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/Product/product_card.dart';
+import 'package:ecommerce_app/screens/Product/product_card.dart';
 import 'package:ecommerce_app/constants/color.dart';
 import 'package:ecommerce_app/screens/drawer/cart/cart_drawer.dart';
 

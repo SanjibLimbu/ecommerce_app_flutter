@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/Product/product_detail_page.dart';
+import 'package:ecommerce_app/screens/Product/product_detail_page.dart';
 import 'package:ecommerce_app/screens/SignUp/signup_screen.dart';
 import 'package:ecommerce_app/screens/login/login_screen.dart';
 import 'package:ecommerce_app/screens/shop/shop.dart';

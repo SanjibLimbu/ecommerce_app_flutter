@@ -1,9 +1,10 @@
 import 'package:ecommerce_app/constants/color.dart';
 import 'package:ecommerce_app/constants/style.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class RatingWidget extends StatelessWidget {
-  const RatingWidget({
+class CustomRatingWidget extends StatelessWidget {
+  const CustomRatingWidget({
     Key? key,
   }) : super(key: key);
 
@@ -34,36 +35,28 @@ class RatingWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const Icon(
-                  Icons.star_rounded,
-                  size: 18,
-                  color: starColor,
-                ),
-                const Icon(
-                  Icons.star_rounded,
-                  size: 18,
-                  color: starColor,
-                ),
-                const Icon(
-                  Icons.star_rounded,
-                  size: 18,
-                  color: starColor,
-                ),
-                const Icon(
-                  Icons.star_rounded,
-                  size: 18,
-                  color: starColor,
-                ),
-                const Icon(
-                  Icons.star_rounded,
-                  size: 18,
-                  color: starColor,
+                RatingBarIndicator(
+                  
+                
+                
+                 
+                  direction: Axis.horizontal,
+                  rating: 4.6,
+                 
+                  itemCount: 5,
+                  itemSize: 25,
+                  itemPadding: const EdgeInsets.symmetric(horizontal: 0),
+                  itemBuilder: (context, _) => const Icon(
+                    Icons.star_rounded,
+                    color: starColor,
+                  ),
+                 
                 ),
                 const SizedBox(
-                  width: 10,
+                  width: 4,
                 ),
                 Text(
-                  'based on 1 reviews.',
+                  'based on 13 reviews.',
                   style: textStyle.copyWith(
                     color: primaryColor,
                   ),
@@ -100,8 +93,7 @@ class RatingWidget extends StatelessWidget {
                         child: LinearProgressIndicator(
                           minHeight: 16,
                           value: 0.6,
-                          valueColor:
-                              const AlwaysStoppedAnimation<Color>(
+                          valueColor: const AlwaysStoppedAnimation<Color>(
                             Color(0xffffb302),
                           ),
                           backgroundColor: Colors.grey.shade400,
@@ -125,4 +117,3 @@ class RatingWidget extends StatelessWidget {
     );
   }
 }
-
