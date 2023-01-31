@@ -1,6 +1,6 @@
 import 'package:ecommerce_app/constants/color.dart';
 import 'package:ecommerce_app/constants/style.dart';
-import 'package:ecommerce_app/settings/setting_tab.dart';
+import 'package:ecommerce_app/screens/settings/setting_tab.dart';
 import 'package:flutter/material.dart';
 
 class OtherCard extends StatelessWidget {

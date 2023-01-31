@@ -3,7 +3,7 @@ import 'package:ecommerce_app/screens/SignUp/signup_screen.dart';
 import 'package:ecommerce_app/screens/login/login_screen.dart';
 import 'package:ecommerce_app/screens/shop/shop.dart';
 import 'package:ecommerce_app/screens/home/home_page.dart';
-import 'package:ecommerce_app/settings/setting_page.dart';
+import 'package:ecommerce_app/screens/settings/setting_page.dart';
 
 import 'package:flutter/material.dart';
 
