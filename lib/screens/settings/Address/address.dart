@@ -1,15 +1,22 @@
 import 'package:ecommerce_app/constants/color.dart';
-
 import 'package:ecommerce_app/constants/style.dart';
 import 'package:ecommerce_app/screens/drawer/cart/cart_drawer.dart';
-import 'package:ecommerce_app/screens/settings/btn.dart';
 import 'package:ecommerce_app/widgets/mimi_app_bar.dart';
 import 'package:ecommerce_app/widgets/text_field.dart';
 import 'package:flutter/material.dart';
 
-class AccountScreen extends StatelessWidget {
-  AccountScreen({super.key});
+import '../btn.dart';
+
+class AddressWidget extends StatefulWidget {
+  AddressWidget({super.key});
+
+  @override
+  State<AddressWidget> createState() => _AddressWidgetState();
+}
+
+class _AddressWidgetState extends State<AddressWidget> {
   final GlobalKey<ScaffoldState> _scaffoldKeyCart = GlobalKey<ScaffoldState>();
+  bool value = false;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +29,7 @@ class AccountScreen extends StatelessWidget {
           scaffoldKeyCart: _scaffoldKeyCart,
           titleAppbar: Center(
             child: Text(
-              'Account',
+              'Address',
               style: textStyle.copyWith(
                 color: textColor,
                 fontSize: 16,
@@ -56,62 +63,11 @@ class AccountScreen extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "SL.sanehang@gmail.com",
-                      style: textStyle.copyWith(
-                        color: primaryColor,
-                      ),
-                    ),
-                    Container(
-                      color: Colors.white,
-                      padding: const EdgeInsets.all(10),
-                      child: Text(
-                        "Member",
-                        style: textStyle.copyWith(
-                          color: primaryColor,
-                        ),
-                      ),
-                    )
-                  ],
-                ),
                 const SizedBox(
                   height: 20,
                 ),
                 Text(
-                  "First Name",
-                  style: textStyle.copyWith(
-                    color: primaryColor,
-                  ),
-                ),
-                const SizedBox(
-                  height: 4,
-                ),
-                const TextFieldCustom(
-                  initialValue: 'Sanjib',
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  "Last Name",
-                  style: textStyle.copyWith(
-                    color: primaryColor,
-                  ),
-                ),
-                const SizedBox(
-                  height: 4,
-                ),
-                const TextFieldCustom(
-                  initialValue: 'Limbu',
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  "Phone Number",
+                  "Address",
                   style: textStyle.copyWith(
                     color: primaryColor,
                   ),
@@ -121,13 +77,85 @@ class AccountScreen extends StatelessWidget {
                 ),
                 const TextFieldCustom(
                   initialValue: '',
-                  hintText: 'Please Enter Your Phone Number',
+                  hintText: 'Address:Street, House No/Apartment No',
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  "CIty",
+                  style: textStyle.copyWith(
+                    color: primaryColor,
+                  ),
+                ),
+                const SizedBox(
+                  height: 4,
+                ),
+                const TextFieldCustom(
+                  initialValue: '',
+                  hintText: 'City',
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  "State",
+                  style: textStyle.copyWith(
+                    color: primaryColor,
+                  ),
+                ),
+                const SizedBox(
+                  height: 4,
+                ),
+                const TextFieldCustom(
+                  initialValue: '',
+                  hintText: 'State',
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  "Country",
+                  style: textStyle.copyWith(
+                    color: primaryColor,
+                  ),
+                ),
+                const SizedBox(
+                  height: 4,
+                ),
+                const TextFieldCustom(
+                  initialValue: '',
+                  hintText: 'Please Enter Your Zipcode',
+                ),
+                 const SizedBox(
+                  height: 15,
+                ),
+                TextButton.icon(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
+                  ),
+                  icon: Checkbox(
+                    onChanged: (bool? newValue) {
+                      setState(() {
+                        value = newValue!;
+                      });
+                    },
+                    value: value,
+                  ),
+                  label: Text(
+                    'As the Default',
+                    textAlign: TextAlign.center,
+                    style: textStyle.copyWith(
+                      color: primaryColor,
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 50,
                 ),
                 const ButtonSave(
-                  btnTitle: 'Save Changes',
+                  btnTitle: 'Add Address',
                 ),
               ],
             ),

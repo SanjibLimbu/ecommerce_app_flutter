@@ -56,7 +56,9 @@ class AccountCard extends StatelessWidget {
                 SettingTabWidget(
                   color: Colors.cyan,
                   icon: 'assets/images/maps-and-flags.png',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'address');
+                  },
                   tabTitle: 'Address',
                 ),
                 const Divider(

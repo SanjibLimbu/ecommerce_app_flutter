@@ -89,7 +89,9 @@ class ChangePassword extends StatelessWidget {
                 const SizedBox(
                   height: 50,
                 ),
-                const ButtonSave(),
+                const ButtonSave(
+                  btnTitle: 'Change Password',
+                ),
               ],
             ),
           ),

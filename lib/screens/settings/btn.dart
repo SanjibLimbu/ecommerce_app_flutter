@@ -5,7 +5,10 @@ import 'package:flutter/material.dart';
 class ButtonSave extends StatelessWidget {
   const ButtonSave({
     Key? key,
+    required this.btnTitle
   }) : super(key: key);
+
+  final String btnTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,7 @@ class ButtonSave extends StatelessWidget {
       ),
       onPressed: () {},
       child: Text(
-        'Change Password',
+        btnTitle,
         style: textStyle.copyWith(
           color: primaryColor,
           fontSize: 13,
