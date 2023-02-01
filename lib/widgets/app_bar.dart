@@ -44,7 +44,7 @@ class AppBarWidget extends StatelessWidget {
             ),
             const Center(
               child: Text(
-                "MERN Store",
+                "Ecommerce",
                 style: TextStyle(
                   color: primaryColor,
                   fontSize: 20,

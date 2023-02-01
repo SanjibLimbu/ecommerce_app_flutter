@@ -68,7 +68,9 @@ class AccountCard extends StatelessWidget {
                 SettingTabWidget(
                   color: Colors.pinkAccent,
                   icon: 'assets/images/order.png',
-                  onPressed: () {},
+                  onPressed: () {
+                     Navigator.pushNamed(context, 'order_screen');
+                  },
                   tabTitle: 'Orders',
                 ),
                 const Divider(

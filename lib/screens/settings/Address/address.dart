@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import '../btn.dart';
 
 class AddressWidget extends StatefulWidget {
-  AddressWidget({super.key});
+  const AddressWidget({super.key});
 
   @override
   State<AddressWidget> createState() => _AddressWidgetState();
@@ -63,9 +63,7 @@ class _AddressWidgetState extends State<AddressWidget> {
                 const SizedBox(
                   height: 16,
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+               
                 Text(
                   "Address",
                   style: textStyle.copyWith(
