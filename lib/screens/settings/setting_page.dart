@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/constants/color.dart';
+
 import 'package:ecommerce_app/constants/style.dart';
 import 'package:ecommerce_app/screens/drawer/cart/cart_drawer.dart';
 import 'package:ecommerce_app/screens/settings/account_card.dart';
@@ -8,8 +9,9 @@ import 'package:ecommerce_app/widgets/mimi_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class SettingPage extends StatelessWidget {
-  SettingPage({super.key});
+   SettingPage({super.key});
   final GlobalKey<ScaffoldState> _scaffoldKeyCart = GlobalKey<ScaffoldState>();
+ 
 
   @override
   Widget build(BuildContext context) {

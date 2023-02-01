@@ -5,10 +5,10 @@ class MimiAppBar extends StatelessWidget {
     Key? key,
     required this.titleAppbar,
     required GlobalKey<ScaffoldState> scaffoldKeyCart,
-  })  : _scaffoldKeyCart = scaffoldKeyCart,
+  })  : scaffoldKeyCart = scaffoldKeyCart,
         super(key: key);
 
-  final GlobalKey<ScaffoldState> _scaffoldKeyCart;
+  final GlobalKey<ScaffoldState> scaffoldKeyCart;
   final titleAppbar;
 
   @override
@@ -32,7 +32,7 @@ class MimiAppBar extends StatelessWidget {
         title: titleAppbar,
         actions: [
           IconButton(
-            onPressed: () => _scaffoldKeyCart.currentState?.openEndDrawer(),
+            onPressed: () => scaffoldKeyCart.currentState?.openEndDrawer(),
             icon: const Icon(
               Icons.shopping_bag_outlined,
               size: 30,

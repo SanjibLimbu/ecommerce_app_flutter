@@ -18,7 +18,7 @@ class ShopScreen extends StatefulWidget {
 }
 
 class _ShopScreenState extends State<ShopScreen> {
-  final GlobalKey<ScaffoldState> _scaffoldKeyCart = GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> scaffoldKeyCart = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,14 +26,14 @@ class _ShopScreenState extends State<ShopScreen> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(70),
         child: MimiAppBar(
-          scaffoldKeyCart: _scaffoldKeyCart,
+          scaffoldKeyCart: scaffoldKeyCart,
           titleAppbar: TextFieldCustom(
             hintText: 'Search Products',
           ),
         ),
       ),
       backgroundColor: bgColor,
-      key: _scaffoldKeyCart,
+      key: scaffoldKeyCart,
       endDrawer: const CartDrawer(),
       body: SafeArea(
         child: Column(
@@ -87,5 +87,3 @@ class _ShopScreenState extends State<ShopScreen> {
     );
   }
 }
-
-

@@ -1,17 +1,22 @@
+import 'package:ecommerce_app/constants/color.dart';
+import 'package:ecommerce_app/constants/style.dart';
 import 'package:flutter/material.dart';
 
 class TextFieldCustom extends StatelessWidget {
   final String hintText;
   final int maxline;
-  const TextFieldCustom({
-    Key? key,
-    required this.hintText,
-    this.maxline=1,
-  }) : super(key: key);
+  final String initialValue;
+  const TextFieldCustom(
+      {Key? key, this.hintText = '', this.maxline = 1, this.initialValue = ''})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: textStyle.copyWith(
+        color: primaryColor,
+      ),
+      initialValue: initialValue,
       keyboardType: TextInputType.multiline,
       maxLines: maxline,
       decoration: InputDecoration(

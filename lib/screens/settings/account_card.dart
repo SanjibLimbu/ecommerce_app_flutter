@@ -32,17 +32,21 @@ class AccountCard extends StatelessWidget {
                 SettingTabWidget(
                   color: Colors.greenAccent,
                   icon: 'assets/images/user.png',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'account_screen');
+                  },
                   tabTitle: 'Account',
                 ),
                 const Divider(
-                 color: bgColor,
+                  color: bgColor,
                   thickness: 2,
                 ),
                 SettingTabWidget(
                   color: Colors.blueAccent,
                   icon: 'assets/images/padlock.png',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'change_password');
+                  },
                   tabTitle: 'Change Password',
                 ),
                 const Divider(

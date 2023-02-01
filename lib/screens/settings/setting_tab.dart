@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class SettingTabWidget extends StatelessWidget {
   final Color color;
   final String tabTitle;
-  final Function onPressed;
+  final void Function()?onPressed;
   final String icon;
   const SettingTabWidget({
     Key? key,
@@ -17,7 +17,7 @@ class SettingTabWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap:onPressed,
       child: ListTile(
         dense: true,
         minVerticalPadding: 0,

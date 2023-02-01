@@ -31,7 +31,7 @@ class OtherCard extends StatelessWidget {
               children: [
                 SettingTabWidget(
                   color: const Color(0xffE0b0FF),
-                  icon: 'assets/images/customer-service.png',
+                  icon: 'assets/images/privacy-policy.png',
                   onPressed: () {},
                   tabTitle: 'Privacy Policy',
                 ),
@@ -41,7 +41,7 @@ class OtherCard extends StatelessWidget {
                 ),
                 SettingTabWidget(
                   color: Colors.lime,
-                  icon: 'assets/images/merchant.png',
+                  icon: 'assets/images/terms.png',
                   onPressed: () {},
                   tabTitle: 'Terms',
                 ),
