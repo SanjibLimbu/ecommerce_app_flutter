@@ -1,4 +1,4 @@
-import 'package:flutter/animation.dart';
+import 'package:flutter/material.dart';
 
 const textColor = Color(0xff262626);
 
@@ -9,3 +9,4 @@ const bgColor = Color(0xfff6f7f8);
 const borderColor = Color(0xffe7e7e7);
 const starColor = Color(0xffffb302);
 const progessBarColor = Color(0xfff1f1f1);
+const white = Colors.white;

@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/constants/color.dart';
 import 'package:ecommerce_app/constants/style.dart';
 import 'package:ecommerce_app/screens/drawer/cart/cart_drawer.dart';
+import 'package:ecommerce_app/screens/settings/orders/order_card.dart';
 import 'package:ecommerce_app/widgets/mimi_app_bar.dart';
 import 'package:ecommerce_app/widgets/text_field.dart';
 import 'package:flutter/material.dart';
@@ -55,6 +56,7 @@ class OrderScreen extends StatelessWidget {
               ),
               const TextFieldCustom(
                 hintText: 'Type The Complete Order ID',
+                color: white,
               ),
               const SizedBox(
                 height: 10,
@@ -71,113 +73,7 @@ class OrderScreen extends StatelessWidget {
               Expanded(
                 child: ListView.builder(
                   itemCount: 5,
-                  itemBuilder: (context, index) => Container(
-                    margin: const EdgeInsets.only(
-                      bottom: 16,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(
-                        color: borderColor,
-                      ),
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/product1.jpeg',
-                          fit: BoxFit.cover,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Column(
-                            children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    'Status',
-                                    style: textStyle.copyWith(
-                                      color: primaryColor,
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 5,
-                                  ),
-                                  Text(
-                                    'Not processed',
-                                    style: textStyle.copyWith(
-                                      color: const Color(0xff758696),
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    'Order #',
-                                    style: textStyle.copyWith(
-                                      color: primaryColor,
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 5,
-                                  ),
-                                  Text(
-                                    '63c51e98f231b8003444676d',
-                                    style: textStyle.copyWith(
-                                      color: primaryColor,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    'Order on',
-                                    style: textStyle.copyWith(
-                                      color: primaryColor,
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 5,
-                                  ),
-                                  Text(
-                                    'Monday, Jan 16, 2023',
-                                    style: textStyle.copyWith(
-                                      color: primaryColor,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    'Order Total',
-                                    style: textStyle.copyWith(
-                                      color: primaryColor,
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 5,
-                                  ),
-                                  Text(
-                                    '\$2500',
-                                    style: textStyle.copyWith(
-                                      color: primaryColor,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
+                  itemBuilder: (context, index) => const OrderCard(),
                 ),
               )
             ],

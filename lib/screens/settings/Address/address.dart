@@ -76,6 +76,7 @@ class _AddressWidgetState extends State<AddressWidget> {
                 const TextFieldCustom(
                   initialValue: '',
                   hintText: 'Address:Street, House No/Apartment No',
+                   color: white,
                 ),
                 const SizedBox(
                   height: 15,
@@ -92,6 +93,7 @@ class _AddressWidgetState extends State<AddressWidget> {
                 const TextFieldCustom(
                   initialValue: '',
                   hintText: 'City',
+                   color: white,
                 ),
                 const SizedBox(
                   height: 15,
@@ -108,6 +110,7 @@ class _AddressWidgetState extends State<AddressWidget> {
                 const TextFieldCustom(
                   initialValue: '',
                   hintText: 'State',
+                   color: white,
                 ),
                 const SizedBox(
                   height: 15,
@@ -124,6 +127,7 @@ class _AddressWidgetState extends State<AddressWidget> {
                 const TextFieldCustom(
                   initialValue: '',
                   hintText: 'Please Enter Your Zipcode',
+                   color: white,
                 ),
                  const SizedBox(
                   height: 15,
@@ -154,6 +158,7 @@ class _AddressWidgetState extends State<AddressWidget> {
                 ),
                 const ButtonSave(
                   btnTitle: 'Add Address',
+                  color: Colors.green,
                 ),
               ],
             ),

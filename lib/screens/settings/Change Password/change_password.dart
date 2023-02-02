@@ -67,6 +67,7 @@ class ChangePassword extends StatelessWidget {
                 ),
                 const TextFieldCustom(
                   hintText: 'Old Password',
+                   color: white,
                 ),
                 const SizedBox(
                   height: 15,
@@ -82,6 +83,7 @@ class ChangePassword extends StatelessWidget {
                 ),
                 const TextFieldCustom(
                   hintText: 'New Password',
+                   color: white,
                 ),
                 const SizedBox(
                   height: 15,
@@ -91,6 +93,7 @@ class ChangePassword extends StatelessWidget {
                 ),
                 const ButtonSave(
                   btnTitle: 'Change Password',
+                  color: Colors.green,
                 ),
               ],
             ),

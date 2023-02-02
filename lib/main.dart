@@ -5,6 +5,7 @@ import 'package:ecommerce_app/screens/settings/Account/account_page.dart';
 import 'package:ecommerce_app/screens/settings/Address/address.dart';
 import 'package:ecommerce_app/screens/settings/Change%20Password/change_password.dart';
 import 'package:ecommerce_app/screens/settings/orders/order.dart';
+import 'package:ecommerce_app/screens/settings/orders/order_details.dart';
 import 'package:ecommerce_app/screens/shop/shop.dart';
 import 'package:ecommerce_app/screens/home/home_page.dart';
 import 'package:ecommerce_app/screens/settings/setting_page.dart';
@@ -37,6 +38,7 @@ class EcommerceApp extends StatelessWidget {
         'change_password': (context) => ChangePassword(),
         'address':(context) => const AddressWidget(),
         'order_screen':(context) => OrderScreen(),
+        'order_details':(context) => OrderDetails(),
       },
     );
   }

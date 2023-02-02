@@ -6,18 +6,21 @@ class SocialBtn extends StatelessWidget {
   final String icon;
   final String title;
   final Function action;
+  final Color color;
 
   const SocialBtn({
     Key? key,
     required this.action,
     required this.icon,
     required this.title,
+    this.color=bgColor,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return OutlinedButton.icon(
       style: OutlinedButton.styleFrom(
+        backgroundColor: color,
         minimumSize: const Size(
           double.infinity,
           55.6,

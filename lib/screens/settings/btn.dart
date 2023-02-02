@@ -5,15 +5,19 @@ import 'package:flutter/material.dart';
 class ButtonSave extends StatelessWidget {
   const ButtonSave({
     Key? key,
-    required this.btnTitle
+    required this.btnTitle,
+    this.color = bgColor,
   }) : super(key: key);
 
   final String btnTitle;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton(
-      style: OutlinedButton.styleFrom(
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: color,
+      
         minimumSize: const Size(
           double.infinity,
           41.6,
@@ -27,7 +31,7 @@ class ButtonSave extends StatelessWidget {
       child: Text(
         btnTitle,
         style: textStyle.copyWith(
-          color: primaryColor,
+          color: white,
           fontSize: 13,
           fontWeight: FontWeight.w500,
         ),

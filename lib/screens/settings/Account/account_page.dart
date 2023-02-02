@@ -91,6 +91,7 @@ class AccountScreen extends StatelessWidget {
                 ),
                 const TextFieldCustom(
                   initialValue: 'Sanjib',
+                  color: white,
                 ),
                 const SizedBox(
                   height: 15,
@@ -106,6 +107,7 @@ class AccountScreen extends StatelessWidget {
                 ),
                 const TextFieldCustom(
                   initialValue: 'Limbu',
+                  color: white,
                 ),
                 const SizedBox(
                   height: 15,
@@ -122,12 +124,15 @@ class AccountScreen extends StatelessWidget {
                 const TextFieldCustom(
                   initialValue: '',
                   hintText: 'Please Enter Your Phone Number',
+                  color: white,
                 ),
                 const SizedBox(
                   height: 50,
                 ),
                 const ButtonSave(
                   btnTitle: 'Save Changes',
+                  color: Colors.green,
+                  
                 ),
               ],
             ),

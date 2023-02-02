@@ -6,9 +6,14 @@ class TextFieldCustom extends StatelessWidget {
   final String hintText;
   final int maxline;
   final String initialValue;
-  const TextFieldCustom(
-      {Key? key, this.hintText = '', this.maxline = 1, this.initialValue = ''})
-      : super(key: key);
+  final Color color;
+  const TextFieldCustom({
+    Key? key,
+    this.hintText = '',
+    this.maxline = 1,
+    this.initialValue = '',
+    this.color=bgColor
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +25,8 @@ class TextFieldCustom extends StatelessWidget {
       keyboardType: TextInputType.multiline,
       maxLines: maxline,
       decoration: InputDecoration(
+        filled: true,
+        fillColor: color,
         hintText: hintText,
         hintStyle: const TextStyle(
           fontSize: 13,
