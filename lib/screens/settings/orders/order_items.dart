@@ -120,7 +120,39 @@ class OrderItems extends StatelessWidget {
                             ],
                           ),
                           OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                builder: ((context) => AlertDialog(
+                                      title: Text(
+                                        'Cancel?',
+                                        style: textStyle.copyWith(
+                                            color: primaryColor,
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                      content: Text(
+                                        'Are you sure you want to cancel Macbook pro?',
+                                        style: textStyle.copyWith(
+                                          color: primaryColor,
+                                        ),
+                                      ),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () {},
+                                          child: const Text('No'),
+                                        ),
+                                        const Expanded(
+                                          child: SizedBox(),
+                                        ),
+                                        TextButton(
+                                          onPressed: () {},
+                                          child: const Text('Yes'),
+                                        )
+                                      ],
+                                    )),
+                              );
+                            },
                             style: OutlinedButton.styleFrom(
                               minimumSize: const Size(
                                 double.infinity,
