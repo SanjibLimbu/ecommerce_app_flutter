@@ -43,13 +43,20 @@ class OrderItems extends StatelessWidget {
                             children: [
                               Expanded(
                                 flex: 2,
-                                child: Image.asset(
-                                  'assets/images/product1.jpeg',
-                                  fit: BoxFit.cover,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(4)),
+                                  child: Image.asset(
+                                    'assets/images/product1.jpeg',
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
+                              const SizedBox(
+                                width: 10,
+                              ),
                               Expanded(
-                                flex: 4,
+                                flex: 5,
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment: MainAxisAlignment.center,

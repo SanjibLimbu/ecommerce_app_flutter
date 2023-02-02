@@ -3,6 +3,7 @@ import 'package:ecommerce_app/constants/style.dart';
 import 'package:ecommerce_app/screens/brand/brand.dart';
 import 'package:ecommerce_app/screens/welcome/welcome.dart';
 import 'package:ecommerce_app/widgets/text_field.dart';
+import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 
 class AppBarWidget extends StatelessWidget {
@@ -62,16 +63,39 @@ class AppBarWidget extends StatelessWidget {
                     color: Colors.black54,
                   ),
                 ),
-                IconButton(
-                  onPressed: () {
+                GestureDetector(
+                  onTap: () {
                     _scaffoldKey.currentState?.openEndDrawer();
                   },
-                  icon: const Icon(
-                    Icons.shopping_bag_outlined,
-                    size: 30,
-                    color: Colors.black,
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: badges.Badge(
+                      showBadge: true,
+                      position: badges.BadgePosition.topEnd(top: -10, end: -10),
+                      onTap: () =>
+                          _scaffoldKey.currentState?.openEndDrawer(),
+                      badgeContent: Padding(
+                        padding: const EdgeInsets.all(1.0),
+                        child: Text(
+                          '5',
+                          style: textStyle.copyWith(
+                            fontSize: 12,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                      badgeStyle: const badges.BadgeStyle(
+                        badgeColor: Color.fromARGB(255, 15, 96, 237),
+                      ),
+                      child: const Icon(
+                        Icons.shopping_bag_outlined,
+                        size: 30,
+                        color: Colors.black,
+                      ),
+                    ),
                   ),
-                )
+                ),
               ],
             ),
             Row(

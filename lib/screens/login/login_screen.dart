@@ -13,7 +13,22 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+        ),
+
+      ),
       body: SafeArea(
+        
           child: CustomScrollView(
         slivers: [
           SliverFillRemaining(
@@ -21,7 +36,7 @@ class LoginScreen extends StatelessWidget {
             child: Container(
               padding: kPaddingWelocome,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
@@ -63,8 +78,12 @@ class LoginScreen extends StatelessWidget {
 
                   TextButton(
                     onPressed: () {},
+                    style: TextButton.styleFrom(
+                      padding: EdgeInsets.zero,
+                    ),
                     child: Text(
                       'Forgot Password?',
+                      textAlign: TextAlign.left,
                       style: textStyle.copyWith(
                         color: linkText,
                       ),

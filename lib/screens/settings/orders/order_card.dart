@@ -26,9 +26,14 @@ class OrderCard extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Image.asset(
-              'assets/images/product1.jpeg',
-              fit: BoxFit.cover,
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(4),
+              ),
+              child: Image.asset(
+                'assets/images/product1.jpeg',
+                fit: BoxFit.cover,
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),

@@ -19,6 +19,12 @@ class WelcomeList extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             ItemList(
+              title: 'Setting',
+              screenName: 'setting_screen',
+              fontSize: 13,
+            ),
+            
+            ItemList(
               title: 'Login',
               screenName: 'login_screen',
               fontSize: 13,
