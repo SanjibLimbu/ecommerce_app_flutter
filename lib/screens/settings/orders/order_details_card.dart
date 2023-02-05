@@ -45,7 +45,7 @@ class OrderDetailsCard extends StatelessWidget {
                         ),
                       ),
                       Expanded(
-                        flex: 4,
+                        flex: 5,
                         child: Text(
                           '63c51e98f231b8003444676d',
                           style: textStyle.copyWith(
@@ -71,7 +71,7 @@ class OrderDetailsCard extends StatelessWidget {
                         ),
                       ),
                       Expanded(
-                        flex: 4,
+                        flex: 5,
                         child: Text(
                           'Monday, Jan 16, 2023',
                           style: textStyle.copyWith(

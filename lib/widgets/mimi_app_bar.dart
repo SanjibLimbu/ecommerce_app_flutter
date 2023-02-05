@@ -46,7 +46,7 @@ class MimiAppBar extends StatelessWidget {
                 badgeContent: Padding(
                   padding: const EdgeInsets.all(1.0),
                   child: Text(
-                    '5',
+                    '1',
                     style: textStyle.copyWith(
                       fontSize: 12,
                       color: Colors.white,

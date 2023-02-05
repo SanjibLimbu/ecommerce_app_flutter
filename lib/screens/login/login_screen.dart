@@ -13,6 +13,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -25,10 +26,8 @@ class LoginScreen extends StatelessWidget {
             color: Colors.black,
           ),
         ),
-
       ),
       body: SafeArea(
-        
           child: CustomScrollView(
         slivers: [
           SliverFillRemaining(
@@ -77,7 +76,9 @@ class LoginScreen extends StatelessWidget {
                   LogInForm(),
 
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'forgot_password');
+                    },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
                     ),

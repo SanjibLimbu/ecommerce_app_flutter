@@ -34,31 +34,38 @@ class CustomRatingWidget extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                RatingBarIndicator(
+                Flexible(
+                  flex: 1,
+                  child: RatingBarIndicator(
+                    
                   
-                
-                
-                 
-                  direction: Axis.horizontal,
-                  rating: 4.6,
-                 
-                  itemCount: 5,
-                  itemSize: 25,
-                  itemPadding: const EdgeInsets.symmetric(horizontal: 0),
-                  itemBuilder: (context, _) => const Icon(
-                    Icons.star_rounded,
-                    color: starColor,
+                  
+                   
+                    direction: Axis.horizontal,
+                    rating: 4.6,
+                   
+                    itemCount: 5,
+                    itemSize: 25,
+                    itemPadding: const EdgeInsets.symmetric(horizontal: 0),
+                    itemBuilder: (context, _) => const Icon(
+                      Icons.star_rounded,
+                      color: starColor,
+                    ),
+                   
                   ),
-                 
                 ),
                 const SizedBox(
                   width: 4,
                 ),
-                Text(
-                  'based on 13 reviews.',
-                  style: textStyle.copyWith(
-                    color: primaryColor,
+                Flexible(
+                  flex: 1,
+                  child: Text(
+                    'based on 13 reviews.',
+                    style: textStyle.copyWith(
+                      color: primaryColor,
+                    ),
                   ),
                 ),
               ],

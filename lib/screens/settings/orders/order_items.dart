@@ -41,7 +41,7 @@ class OrderItems extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              Expanded(
+                              Flexible(
                                 flex: 2,
                                 child: Container(
                                   decoration: BoxDecoration(
@@ -55,7 +55,7 @@ class OrderItems extends StatelessWidget {
                               const SizedBox(
                                 width: 10,
                               ),
-                              Expanded(
+                              Flexible(
                                 flex: 5,
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,21 +76,31 @@ class OrderItems extends StatelessWidget {
                                       ),
                                     ),
                                     Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
-                                        Text(
-                                          'Status',
-                                          style: textStyle.copyWith(
-                                            color: primaryColor,
+                                        Flexible(
+                                          flex: 3,
+                                          child: Text(
+                                            'Status:',
+                                            style: textStyle.copyWith(
+                                              color: primaryColor,
+                                            ),
                                           ),
                                         ),
                                         const SizedBox(
                                           width: 5,
                                         ),
-                                        Text(
-                                          'Not processed',
-                                          style: textStyle.copyWith(
-                                            color: const Color(0xff758696),
-                                            fontWeight: FontWeight.w500,
+                                        Flexible(
+                                          flex: 5,
+                                          child: Text(
+                                            'Not processed',
+                                            style: textStyle.copyWith(
+                                              color: const Color(0xff758696),
+                                              fontWeight: FontWeight.w500,
+                                            ),
                                           ),
                                         )
                                       ],
@@ -102,18 +112,22 @@ class OrderItems extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Flexible(
-                                          flex: 3,
+                                          flex: 4,
                                           child: Text(
-                                            'Quantity 1',
+                                            'Quantity: 1',
+                                            // softWrap: false,
                                             style: textStyle.copyWith(
                                               color: primaryColor,
                                             ),
                                           ),
                                         ),
+                                        const SizedBox(
+                                          width: 5,
+                                        ),
                                         Flexible(
-                                          flex: 5,
+                                          flex: 7,
                                           child: Text(
-                                            'Total Price \$2500',
+                                            'Total Price: \$2500',
                                             style: textStyle.copyWith(
                                               color: primaryColor,
                                             ),
@@ -149,7 +163,7 @@ class OrderItems extends StatelessWidget {
                                           onPressed: () {},
                                           child: const Text('No'),
                                         ),
-                                        const Expanded(
+                                        const Flexible(
                                           child: SizedBox(),
                                         ),
                                         TextButton(

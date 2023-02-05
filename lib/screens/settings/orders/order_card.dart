@@ -41,20 +41,26 @@ class OrderCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(
-                        'Status',
-                        style: textStyle.copyWith(
-                          color: primaryColor,
+                      Expanded(
+                        flex: 2,
+                        child: Text(
+                          'Status',
+                          style: textStyle.copyWith(
+                            color: primaryColor,
+                          ),
                         ),
                       ),
                       const SizedBox(
                         width: 5,
                       ),
-                      Text(
-                        'Not processed',
-                        style: textStyle.copyWith(
-                          color: const Color(0xff758696),
-                          fontWeight: FontWeight.w500,
+                      Expanded(
+                        flex: 5,
+                        child: Text(
+                          'Not processed',
+                          style: textStyle.copyWith(
+                            color: const Color(0xff758696),
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       )
                     ],
@@ -62,17 +68,17 @@ class OrderCard extends StatelessWidget {
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Flexible(
+                      Expanded(
                         flex: 2,
                         child: Text(
-                          'Order #',
+                          'Order No ',
                           style: textStyle.copyWith(
                             color: primaryColor,
                           ),
                         ),
                       ),
-                      Flexible(
-                        flex: 4,
+                      Expanded(
+                        flex: 5,
                         child: Text(
                           '63c51e98f231b8003444676d',
                           style: textStyle.copyWith(
@@ -85,17 +91,17 @@ class OrderCard extends StatelessWidget {
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Flexible(
+                      Expanded(
                         flex: 2,
                         child: Text(
-                          'Order on',
+                          'Order on ',
                           style: textStyle.copyWith(
                             color: primaryColor,
                           ),
                         ),
                       ),
-                      Flexible(
-                        flex: 4,
+                      Expanded(
+                        flex: 5,
                         child: Text(
                           'Monday, Jan 16, 2023',
                           style: textStyle.copyWith(
@@ -109,17 +115,17 @@ class OrderCard extends StatelessWidget {
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Flexible(
+                      Expanded(
                         flex: 2,
                         child: Text(
-                          'Order Total',
+                          'Order Total ',
                           style: textStyle.copyWith(
                             color: primaryColor,
                           ),
                         ),
                       ),
-                      Flexible(
-                        flex: 4,
+                      Expanded(
+                        flex: 5,
                         child: Text(
                           '\$2500',
                           style: textStyle.copyWith(

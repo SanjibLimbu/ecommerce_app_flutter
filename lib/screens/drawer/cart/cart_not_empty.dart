@@ -33,7 +33,7 @@ class CartNotEmpty extends StatelessWidget {
           ),
           Flexible(
             child: ListView.builder(
-                itemCount: 4,
+                itemCount: 1,
                 itemBuilder: ((context, index) {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -101,7 +101,7 @@ class CartNotEmpty extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        index == 4 - 1
+                        index == 1 - 1
                             ? const SizedBox()
                             : const Divider(
                                 thickness: 1,
